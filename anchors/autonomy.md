@@ -24,6 +24,13 @@ move money. delete data. touch credentials/secrets. publish publicly
 (90-day human-veto rule stands). contact other people as me without L1
 proposal + my explicit go.
 
+## secrets (radioactive - overrides everything above)
+The court knows WHAT secrets exist and where; it never handles VALUES
+loosely. Secret values: never in any network API call - cloud LLM prompts
+included (local model or no model for secret-adjacent work). Never in the
+vault, kanban, logs, or any repo. Storage is sops/.env/password-manager
+only. jgserv AGENTS.md carries the same rule; Proof audits weekly.
+
 ## promotion
 A capability moves up one level only by me editing this file, ideally
 after the court cites evidence (task history) that it's earned it.

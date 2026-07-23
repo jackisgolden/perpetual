@@ -26,6 +26,29 @@ Read this before touching the vault. The vault is this repo.
    in _meta/compile-log.md. Vetoed -> fix and resubmit (max 3 rounds).
 9. Processed inbox items move to `00-inbox/archive/`.
 
+## weekly audit (runs with the reflection compile - Proof executes)
+
+Every week, `_meta/audit-YYYY-WW.md` with two measured scores:
+
+**Autonomy** - how much rope the court actually used:
+- tasks by ladder level (L0/L1/L2/L3 counts from kanban history)
+- proposals vs direct acts; any overreach incidents (acted above level)
+- interrupts sent vs batched; Jack's veto rate on proposals
+- one line: "earned promotion case" if evidence supports one, else "none"
+
+**Security** - whether the rules held:
+- secrets sweep: vault, kanban titles/remarks, logs, commits this week -
+  zero secret values, addresses, raw balances (report the greps run)
+- egress check: which model endpoints served which agents this week; any
+  secret-adjacent task that touched a CLOUD endpoint is a critical finding
+- gateway/config drift: openclaw.json provider list vs expected; new
+  network listeners on pi/pc vs jgserv registry
+- anchors integrity: `git log anchors/` shows only Jack's commits
+
+Findings are facts with evidence, not vibes. Critical findings notify
+Jack immediately (Sieve, interrupt-worthy); the rest go in the audit page
+and the retro. Scores are trends, not grades - the Almanac charts both.
+
 ## hardness (Jack's design: knowledge has a lifecycle)
 
 Every compiled page carries `state: fresh | condensing | hardened`.
