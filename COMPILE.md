@@ -25,3 +25,22 @@ Read this before touching the vault. The vault is this repo.
    source? Approved -> merge to main + delete branch + one-line summary
    in _meta/compile-log.md. Vetoed -> fix and resubmit (max 3 rounds).
 9. Processed inbox items move to `00-inbox/archive/`.
+
+## hardness (Jack's design: knowledge has a lifecycle)
+
+Every compiled page carries `state: fresh | condensing | hardened`.
+
+- **fresh** - newly learned. Verbose, heavily linked, tentative. Expected
+  to be long and messy; that's what fresh growth looks like.
+- **condensing** - under revision. Each compile should SHORTEN it: remove
+  scaffolding links, merge duplicates, keep what predicts.
+- **hardened** - canonical. Short, stable, rarely edited. Compile passes
+  leave it alone unless evidence contradicts it (then it goes back to
+  condensing - hardened is not sacred, it's just settled).
+
+Compiler rule: a condensing page that GREW without new source material is
+a compile failure - understanding compresses. The Almanac charts
+bytes-per-topic over time in `_meta/`; falling curves with passing
+artifacts (tests, builds, trades) are the proof of studying. Coach keys
+spaced review to state: fresh pages get revisited soon, hardened rarely.
+Yearly git tags are the growth rings.
